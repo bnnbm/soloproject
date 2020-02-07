@@ -1,0 +1,17 @@
+package Action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Action.ActionForward;
+import model.Member;
+import model.MemberDao;
+
+public class InfoAction extends UserLoginAction {
+	@Override
+	protected ActionForward doExecute(HttpServletRequest request, HttpServletResponse response) {
+		Member info = new MemberDao().selectOne(id);
+		request.setAttribute("info", info);
+		return new ActionForward();
+	}
+}

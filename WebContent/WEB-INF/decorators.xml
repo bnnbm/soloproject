@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<!--  /WEB-INF/decorators.xml -->
+<decorators defaultdir="/decorator">
+   <decorator name="main" page="decorator3.jsp">
+      <pattern>/model2/member/*</pattern>
+      <pattern>/model2/board/*</pattern>    
+   </decorator>
+   <excludes>
+      <pattern>/model2/member/picture*</pattern>
+      <pattern>/model2/board/upload*</pattern>
+      <pattern>/model2/member/id*</pattern>
+      <pattern>/model2/member/pw*</pattern>
+      <pattern>/model2/ajax*</pattern>
+   </excludes>
+</decorators>
